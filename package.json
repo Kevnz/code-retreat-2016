@@ -1,0 +1,19 @@
+{
+  "name": "code-retreat-2016",
+  "version": "1.0.0",
+  "description": "Code Retreat",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "People",
+  "license": "Unlicense",
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "mocha": "^3.1.2"
+  }
+}
