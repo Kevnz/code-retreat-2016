@@ -16,13 +16,20 @@ describe('Conways Game of Life', () => {
         }
       },
       getNeighborCount: function({ x, y }) {
+        let count = 0;
+        const onBoard = function (x, y) {
+          return (x - 1 < 0) || (y - 1 < 0) || (x + 1 > this.grid[0].length - 1) || (y + 1 > this.grid[x][y].length - 1);
+        }
+        let leftTopCorner = onBoard(x, y) ? this.grid[x - 1][y - 1] : 0;
+        let middleTop = onBoard(x, y) ? this.grid[x - 1][y] : 0;
+        return count;
 
       }
     };
 
     assert.ok(board.checkCell(1, 1));
     //board.turn();
-    assert.ok(board.getNeighborCount({x: 1, y: 1}) === 1);
+    assert.ok(board.getNeighborCount({ x: 1, y: 1 }) === 1);
     //assert.ok(board.checkCell(1, 1) === false);
     done();
   });
